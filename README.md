@@ -1,1 +1,1 @@
-I Set Up the Backend with MySQL (XAMPP)
+I Set Up the Database with MySQL (XAMPP)
