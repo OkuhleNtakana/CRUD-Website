@@ -1,0 +1,58 @@
+     <!-- Favicon -->
+     <link href="img/favicon.icon" rel="icon">
+
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     
+     <!-- CSS Libraries -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+ 
+ <!-- Account Start -->
+ <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+          
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <h1 class="display-6 mb-5">Account Details</h1>
+                    
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="lblName" class="form-label">First Name</label>
+                                <input  class="form-control" [(ngModel)]="name" name="name" [placeholder]="nameplace">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lblSurname" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" [(ngModel)]="surname" name="surname" [placeholder]="surnameplace">
+                            </div>
+                            <div class="col-12">
+                                <label for="lblPhoneNumber" class="form-label">ID Number</label>
+                                <input type="text" class="form-control" [(ngModel)]="Idnumber" name="Idnumber" [placeholder]="Idnameplace" >
+                            </div>
+                            <div class="col-12">
+                                <label for="lblEmail" class="form-label">username</label>
+                                <input type="email" class="form-control" [(ngModel)]="username" name="username" [placeholder]="usernameplace" >
+                            </div>
+                            <div class="col-12">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" [(ngModel)]="password" name="password" [placeholder]="passwordplace" >
+                            </div>
+                          <div style="margin:10px; display:flex;">
+
+                            
+
+                            <Button class="btn btn-primary py-2 px-3 me-3" style="margin:10px;"  (click)="logout()">Log out</Button>
+                         </div>   
+                      
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Account End -->

@@ -1,0 +1,57 @@
+
+ <!-- Favicon -->
+ <link href="img/favicon.icon" rel="icon">
+
+ <!-- Google Font -->
+ <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+ <!-- CSS Libraries -->
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+<!-- Register Start -->
+   <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <h1 class="display-6 mb-5">Create Your Account</h1>
+                    <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
+                        <p class="text-dark mb-2"> Create your account and get started.</p>
+                    </div>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="u_name" class="form-label">First Name</label>
+                                <input type="text" [(ngModel)]="Firstname" name="Firstname" class="form-control"  required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="u_surname" class="form-label">Surname</label>
+                                <input type="text" [(ngModel)]="surname" name="surname" class="form-control"  required>
+                            </div>
+                           
+                            <div class="col-12">
+                                <label for="u_cell" class="form-label">ID Number</label>
+                                <input type="text" [(ngModel)]="Idnumber" name="Idnumber" [placeholder]="idNumberplace" class="form-control"  required>
+                            </div>
+                            <div class="col-12">
+                                <label for="u_email" class="form-label">Username</label>
+                                <input type="text" [(ngModel)]="username" name="username" class="form-control" irequired>
+                            </div>
+                            <div class="col-12">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" [(ngModel)]="password" name="password"  [placeholder]="passwordplace" class="form-control"  required>
+                            </div>
+                            <div class="col-12" style="margin-top:10px">
+                                <Button   (click)="Register()" type="submit" class="btn btn-primary py-2 px-3 me-3"> Register New Account</Button>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="mt-4">Already have an account? <a routerLink="/Login" class="text-primary">Login here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Register End -->

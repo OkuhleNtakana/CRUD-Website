@@ -1,0 +1,49 @@
+    <!-- Favicon -->
+ <link href="img/favicon.icon" rel="icon">
+
+ <!-- Google Font -->
+ <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+ <!-- CSS Libraries -->
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!--	Main Start-->
+    <div>
+		   
+        <div class="container-xxl py-5">
+      <div class="container">
+          <div class="row g-5">
+             
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="h-100">
+                  <h1 class="display-6 mb-5">Welcome </h1>
+                      <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
+                          <p class="text-dark mb-2">Please enter your email and password to log in.</p>
+                      </div>
+                      <form>
+                          <div class="row g-3">
+                              <div class="col-12">
+                                <label for="email" class="form-label">Username</label>
+                                <input  type="text" id="username" [(ngModel)]="username" name="username" [placeholder]="usernameplace" class="form-control" required>
+                            </div>
+                              <div class="col-12">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control"  [(ngModel)]="password" name="password" required>
+                            </div>
+                              <div class="col-12"  style="margin-top:10px">
+                                <Button class="btn btn-primary btn-lg btn-block" (click)="login()" > Login To Account </Button>
+                              
+                              </div>
+                          </div>
+                      </form>
+                      <p class="mt-4">Don't have an account? <a routerLink="/Register" class="text-primary">Register here</a>.</p>
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+         
+         </div>
+      <!--Main End-->
