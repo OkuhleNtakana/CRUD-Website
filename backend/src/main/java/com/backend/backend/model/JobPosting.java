@@ -7,7 +7,15 @@ import jakarta.persistence.*;
 public class JobPosting {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="jobPost_id")
+    private int jobPosting_id;
+
+   public int getjobPosting_id() {
+       return this.jobPosting_id;
+   }
+
+   public void setjobPosting_id(int jobPost_id) {
+       this.jobPosting_id = jobPost_id;
+   }
 
     private String jobTitle;
     private String jobLocation;
@@ -22,7 +30,12 @@ public class JobPosting {
     private List<Skills> skills;
 
     @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="fk_jobPost_id",referencedColumnName = "jobPost_id")
+    @JoinColumn(name="fk_jobPosting_id",referencedColumnName = "jobPosting_id")
+    private List<Qualifications> quali;
+
+  
+    @OneToMany(cascade=CascadeType.ALL)
+    @JoinColumn(name="fk_jobPost_id",referencedColumnName = "jobPosting_id")
     private List<JobApplied> jobApplieds;
 
     //Getters
@@ -53,9 +66,16 @@ public class JobPosting {
 
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
+    }  
+    public List<Qualifications> getQuali() {
+        return this.quali;
     }
 
-    //Setters
+
+     //Setters
+    public void setQuali(List<Qualifications> quali) {
+        this.quali = quali;
+    }
     public void setJobLocation(String jobLocation) {
         this.jobLocation = jobLocation;
     }

@@ -18,7 +18,7 @@ public class JobPostingController {
      @Autowired
     private UserService serve;
     @GetMapping("getJob")
-    public JobPosting getJob(@RequestParam String param) {
+    public JobPosting getJob(@RequestParam int param) {
         return serve.getJob(param);
     }
     @GetMapping("/getJobs")

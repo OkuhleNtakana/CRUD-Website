@@ -36,10 +36,10 @@ public class ApplicantController {
     public List<Applicant> getAllApplicants() {
         return userservice.geApplicants();
     }
-    @PostMapping("/update")
+    /*@PostMapping("/update")
     public Applicant updateApplicant(@RequestBody Applicant entity) {
         return userservice.UpdateApplicant(entity);
-    }
+    }*/
     
    
     

@@ -36,14 +36,14 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
-    public User getUser(String username) {
-        return  userrep.findByUsername(username);
+    public User getUser(String email) {
+        return  userrep.findByEmail(email);
     }
 
-    @Override
-    public User UpdateUser(User user) {
-        return userrep.updateUser(user);
-    }
+    // @Override
+    // public User UpdateUser(User user) {
+    //     return userrep.updateUser(user);
+    // }
 
     @Override
     public void deleteAccount(int id) {
@@ -51,8 +51,8 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
-    public boolean login(String username, String password) {
-        return userrep.findByUsernameAndUserPassword(username, password).isPresent();
+    public boolean login(String email, String password) {
+        return userrep.findByEmailAndUserPassword(email, password).isPresent();
     }
 
     @Override
@@ -76,9 +76,9 @@ public class UserServiceImplementation implements UserService {
         return postsrepo.findAll();
     }
 
-    @SuppressWarnings("deprecation")
+  
     @Override
-    public JobPosting getJob(String id) {
+    public JobPosting getJob(int id) {
         return postsrepo.getById(id);
     }
 
@@ -106,17 +106,18 @@ public class UserServiceImplementation implements UserService {
     public Qualifications addQualifications(Qualifications qualifications) {
         return qualisrepo.save(qualifications);
     }
-
-    @Override
-    public JobApplied updateJobApplied(JobApplied uJobApplied) {
-        return jobapprepo.updateJob(uJobApplied);
-    }
-
     @Override
     public List<Skills> getSkills() {
         return skillsrepo.findAll();
     }
 
+
+   /*  @Override
+    public JobApplied updateJobApplied(JobApplied uJobApplied) {
+        return jobapprepo.updateJob(uJobApplied);
+    }
+
+   
     @Override
     public List<Qualifications> getQualificationsApplicantId(int id) {
         return qualisrepo.getByApplicant_Id(id);
@@ -125,7 +126,7 @@ public class UserServiceImplementation implements UserService {
     @Override
     public List<Qualifications> getQualificationsJobsId(int id) {
         return qualisrepo.getByJobPosting_Id(id);
-    }
+    }*/
     @Override
     public List<Qualifications> getQualifications()
     {
@@ -134,13 +135,13 @@ public class UserServiceImplementation implements UserService {
 
 
  
-    @Override
+   /*  @Override
     public List<AdditionalFiles> getAdditionalFilesId(int id) {
        return addrepo.getByApplicant_Id(id);
     }
 
   
-    @Override
+     @Override
     public List<Skills> getSkillsJobsId(int id) {
         return skillsrepo.getByJobPosting_Id(id);
     }
@@ -163,6 +164,6 @@ public List<JobApplied> GetJobAppliedApplicantId(int id) {
 @Override
 public List<JobApplied> GetJobAppliedJobId(int id) {
     return jobapprepo.getByJobPosting_Id(id);
-}
+}*/
 }
   

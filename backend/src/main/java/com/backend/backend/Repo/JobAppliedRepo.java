@@ -9,7 +9,7 @@ import com.backend.backend.model.JobApplied;
 
 @Repository
 public interface JobAppliedRepo extends JpaRepository<JobApplied,Integer>{
-    JobApplied updateJob(JobApplied job);
-    List<JobApplied> getByApplicant_Id(int applicantid);
-    List<JobApplied> getByJobPosting_Id(int jobpostingid);
+    // JobApplied updateJob(JobApplied job);
+    // List<JobApplied> getByApplicant_Id(int applicantid);
+    // List<JobApplied> getByJobPosting_Id(int jobpostingid);
 }

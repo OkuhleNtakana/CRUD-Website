@@ -19,8 +19,8 @@ public class AdditionalFilesController {
         return userService.addFile(entity);
     }
     
-    @GetMapping("/getQualiId/{id}")
+  /*   @GetMapping("/getQualiId/{id}")
     public List<AdditionalFiles> getAdditionalFilesId(@RequestParam int id) {
         return userService.getAdditionalFilesId(id);
-    }
+    }*/
 }

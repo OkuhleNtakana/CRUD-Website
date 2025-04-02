@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 public class Skills {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="skill_id")
     private int skill_id;
 
    //Getters

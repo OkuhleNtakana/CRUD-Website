@@ -25,13 +25,13 @@ public class SkillsController {
         return userService.getSkills();
     }
 
-    @GetMapping("/getSkillsApplicantId/{id}")
+    /*@GetMapping("/getSkillsApplicantId/{id}")
     public List<Skills> getSkillsApplicantId(@RequestParam int id) {
         return userService.getSkillsApplicantId(id);
     }
     @GetMapping("/getSkillsJobPostingId/{id}")
     public List<Skills> getSkillsJobPostingId(@RequestParam int id) {
         return userService.getSkillsJobsId(id);
-    }
+    }*/
 
 }

@@ -25,14 +25,14 @@ public class QualificationsController {
         return new String();
     }
 
-    @GetMapping("/getQualiApplicantId/{id}")
+   /*  @GetMapping("/getQualiApplicantId/{id}")
     public List<Qualifications> getSkillsApplicantId(@RequestParam int id) {
         return userService.getQualificationsApplicantId(id);
     }
     @GetMapping("/getQualiJobPostingId/{id}")
     public List<Qualifications> getQualiJobPostingId(@RequestParam int id) {
         return userService.getQualificationsJobsId(id);
-    }
+    }*/
     
     
 }

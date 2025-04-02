@@ -6,8 +6,7 @@ import jakarta.persistence.*;
 public class Qualifications {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "qualification_id")
-    private int qualiId;
+    private int qualification_id;
     private String qualificatiionName;
     private Date dateObtained;
 
@@ -19,7 +18,7 @@ public class Qualifications {
         return this.dateObtained;
     }
     public int getQualiId() {
-        return this.qualiId;
+        return this.qualification_id;
     }
 
     //Setters
@@ -30,7 +29,7 @@ public class Qualifications {
         this.dateObtained=date;
     }
     public void setQualiId(int qualiId) {
-        this.qualiId = qualiId;
+        this.qualification_id = qualiId;
     }
 
 

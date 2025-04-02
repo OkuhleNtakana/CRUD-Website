@@ -5,7 +5,15 @@ import jakarta.persistence.*;
 public class JobApplied {
   @Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
-  private int JobAppliedId;
+  private int jobAppliedId;
+
+  public int getJobAppliedId() {
+    return this.jobAppliedId;
+  }
+
+  public void setJobAppliedId(int jobAppliedId) {
+    this.jobAppliedId = jobAppliedId;
+  }
   
   private String Status;
   private Float Score;

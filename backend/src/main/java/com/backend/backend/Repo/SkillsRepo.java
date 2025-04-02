@@ -10,6 +10,6 @@ import com.backend.backend.model.Skills;
 
 @Repository
 public interface SkillsRepo extends JpaRepository<Skills,Integer>{
-    List<Skills> getByApplicant_Id(int applicantid);
-    List<Skills> getByJobPosting_Id(int jobpostingid);
+    // List<Skills> getByApplicant_Id(int applicantid);
+    // List<Skills> getByJobPosting_Id(int jobpostingid);
 }

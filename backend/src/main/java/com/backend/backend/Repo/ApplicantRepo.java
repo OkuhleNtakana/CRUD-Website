@@ -7,5 +7,5 @@ import com.backend.backend.model.Applicant;
 
 @Repository
 public interface ApplicantRepo extends JpaRepository<Applicant,Integer>{
-    Applicant updateApplicant(Applicant applicant);
+   // Applicant updateApplicant(Applicant applicant);
 }

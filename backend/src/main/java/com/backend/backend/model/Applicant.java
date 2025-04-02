@@ -4,17 +4,10 @@ import java.util.List;
 
 import jakarta.persistence.*;
 @Entity
-//@DiscriminatorValue("APPLICANT")
-public class Applicant extends User{
+public class Applicant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="applicant_id")
     private int applicant_id;
-
-    //Table Relationships and Linking
-    /*@OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_id")
-    private User user;*/
 
     @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name="fk_applicant_id",referencedColumnName = "applicant_id")
@@ -32,9 +25,7 @@ public class Applicant extends User{
     public List<Qualifications> getQualifications() {
         return this.qualifications;
     }
-    /*public User getUser() {
-        return this.user;
-    }*/
+   
     public List<JobApplied> getJobApplieds() {
         return this.jobApplieds;
     }
@@ -45,10 +36,7 @@ public class Applicant extends User{
     public void setSkills(List<Skills> skills) {
         this.skills = skills;
     }
-    /*public void setUser(User user) {
-        this.user = user;
-    }*/
-
+    
     public void setJobApplieds(List<JobApplied> jobApplieds) {
         this.jobApplieds = jobApplieds;
     }

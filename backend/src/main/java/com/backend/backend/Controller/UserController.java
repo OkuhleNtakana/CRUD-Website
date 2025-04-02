@@ -27,7 +27,10 @@ public class UserController {
     public List<User> getAllUsers(){
          return userService.getAllUsers();
     }
-
+    @GetMapping("/get")
+    public String get(){
+         return "YHOOOOOOOOOOOO";
+    }
     @GetMapping("/getUser/{username}")
     public User getUser(@PathVariable String username){
         return userService.getUser(username);
@@ -38,11 +41,11 @@ public class UserController {
          return userService.login(username, password);
     }
 
-    @PutMapping("/updateUser")
-        public String updateUser(@RequestBody User user){
-            userService.UpdateUser(user);
-            return "User updated";
-        }
+    // @PutMapping("/updateUser")
+    //     public String updateUser(@RequestBody User user){
+    //         userService.UpdateUser(user);
+    //         return "User updated";
+    //     }
 
     @DeleteMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable int id){

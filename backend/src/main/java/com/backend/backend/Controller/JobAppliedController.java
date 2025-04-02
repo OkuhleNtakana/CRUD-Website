@@ -22,7 +22,7 @@ public class JobAppliedController {
     public JobApplied applicantApply(@RequestBody JobApplied entity) {
         return serve.applicantApply(entity);
     }
-    @PutMapping("/updateJobApplied")
+  /*   @PutMapping("/updateJobApplied")
     public JobApplied updateJobApplied(@RequestBody JobApplied entity) {
         return serve.updateJobApplied(entity);
     }
@@ -33,7 +33,7 @@ public class JobAppliedController {
     @GetMapping("GetJobAppliedJobId")
     public List<JobApplied> GetJobAppliedJobId(@RequestParam int  id) {
         return serve.GetJobAppliedJobId(id);
-    }
+    }*/
     
     
 }

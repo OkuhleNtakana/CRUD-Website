@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.backend.backend.model.JobPosting;
 
 @Repository
-public interface JobPostingRepo extends JpaRepository<JobPosting,String>{
+public interface JobPostingRepo extends JpaRepository<JobPosting,Integer>{
     
 }

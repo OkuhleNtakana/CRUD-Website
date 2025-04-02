@@ -9,5 +9,5 @@ import com.backend.backend.model.AdditionalFiles;
 
 @Repository
 public interface AdditionalFilesRepo extends JpaRepository<AdditionalFiles,Integer>{
-    List<AdditionalFiles> getByApplicant_Id(int applicantid);
+   // List<AdditionalFiles> getByApplicant_Id(int applicantid);
 }

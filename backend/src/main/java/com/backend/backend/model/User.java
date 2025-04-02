@@ -3,12 +3,10 @@ package com.backend.backend.model;
 import jakarta.persistence.*;
 
 @Entity
-//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-//@DiscriminatorColumn(name = "user_type", discriminatorType = DiscriminatorType.STRING)
+//@Inheritance(strategy = InheritanceType.JOINED)
 public class  User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="user_id")
     private int user_id;
 
     private String identification;
@@ -17,6 +15,17 @@ public class  User {
     private String email;
     private String userPassword;
     private boolean userActive;
+    @Enumerated(value=EnumType.STRING)
+    private UserType usertype;
+
+    public UserType getUsertype() {
+        return this.usertype;
+    }
+
+    public void setUsertype(UserType usertype) {
+        this.usertype = usertype;
+    }
+
     private String address;
     private String gender;
     private String experience;

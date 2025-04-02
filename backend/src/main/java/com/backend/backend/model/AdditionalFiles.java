@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 public class AdditionalFiles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="additional_id")
     private int additional_id;
 
     public int getAdditional_id() {
