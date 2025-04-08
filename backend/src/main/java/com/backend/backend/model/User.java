@@ -1,14 +1,20 @@
 package com.backend.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import jakarta.persistence.*;
 
 @Entity
-//@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="type",discriminatorType=DiscriminatorType.STRING)
+@JsonTypeInfo(use=JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY,property="type")
+@JsonSubTypes({@JsonSubTypes.Type(value=Applicant.class,name="Applicant")})
 public class  User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int user_id;
-
+    
     private String identification;
     private String name;
     private String userSurname;
@@ -17,6 +23,10 @@ public class  User {
     private boolean userActive;
     @Enumerated(value=EnumType.STRING)
     private UserType usertype;
+    private String address;
+    private String gender;
+    private String experience;
+    private int age;
 
     public UserType getUsertype() {
         return this.usertype;
@@ -25,11 +35,6 @@ public class  User {
     public void setUsertype(UserType usertype) {
         this.usertype = usertype;
     }
-
-    private String address;
-    private String gender;
-    private String experience;
-    private int age;
 
     //Getters
     public int getUserAge(){
@@ -44,7 +49,7 @@ public class  User {
     public String getUserSurname(){
         return this.userSurname;
     }
-    public String getUsername(){
+    public String getEmail(){
         return this.email;
     }
     public String getUserAddress(){

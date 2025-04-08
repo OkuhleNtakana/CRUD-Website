@@ -137,11 +137,11 @@ public class UserServiceImplementation implements UserService {
  
    /*  @Override
     public List<AdditionalFiles> getAdditionalFilesId(int id) {
-       return addrepo.getByApplicant_Id(id);
-    }
+       return addrepo.getByfkapplicantid(id);
+    }*/
 
   
-     @Override
+     /*@Override
     public List<Skills> getSkillsJobsId(int id) {
         return skillsrepo.getByJobPosting_Id(id);
     }

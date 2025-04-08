@@ -1,25 +1,27 @@
 package com.backend.backend.model;
 
 import java.util.List;
-
 import jakarta.persistence.*;
 @Entity
-public class Applicant {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int applicant_id;
+@DiscriminatorValue("Applicant")
+public class Applicant extends User{
 
+    
     @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="fk_applicant_id",referencedColumnName = "applicant_id")
+    @JoinColumn(name="fkapplicantid",referencedColumnName = "user_id")
     private List<Skills> skills;
     
     @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="fk_applicant_id",referencedColumnName = "applicant_id")
+    @JoinColumn(name="fkapplicantid",referencedColumnName = "user_id")
     private List<Qualifications> qualifications;
 
     @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="fk_applicant_id",referencedColumnName = "applicant_id")
+    @JoinColumn(name="fkapplicantid",referencedColumnName = "user_id")
     private List<JobApplied> jobApplieds;
+
+    @OneToMany(cascade=CascadeType.ALL)
+    @JoinColumn(name="fkapplicantid",referencedColumnName = "user_id")
+    private List<AdditionalFiles> AdditionalFiles;
 
     //Getters
     public List<Qualifications> getQualifications() {
